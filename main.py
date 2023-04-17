@@ -23,8 +23,8 @@ def get_data(session, animal):
 
 
 def main():
-    st.set_page_config(page_title="Random facts for Dogs and Cats!")
-    st.title("Random facts about Dogs and Cats!")
+    st.set_page_config(page_title="Fun facts about Dogs and Cats!")
+    st.title("Fun Facts about Dogs and Cats!")
     session = requests.Session()
 
     hide_fullscreen_button_css = """
@@ -41,7 +41,7 @@ def main():
 
     with st.form(key="my_form"): 
         choice = st.selectbox("Choose your furry friend!", ["dog", "cat"], key="choice")
-        submit = st.form_submit_button(label="Generate Random Fact")
+        submit = st.form_submit_button(label="Generate Fun Fact")
 
     if submit:
         col1, col2 = st.columns(2, gap="medium")
