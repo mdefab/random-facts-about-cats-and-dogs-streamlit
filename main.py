@@ -41,7 +41,7 @@ def main():
 
     with st.form(key="my_form"): 
         choice = st.selectbox("Choose your furry friend!", ["dog", "cat"], key="choice")
-        submit = st.form_submit_button(label="submit")
+        submit = st.form_submit_button(label="Generate Random Fact")
 
     if submit:
         col1, col2 = st.columns(2, gap="medium")
