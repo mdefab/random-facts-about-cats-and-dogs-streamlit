@@ -43,10 +43,13 @@ def main():
         choice = st.selectbox("Choose your furry friend!", ["dog", "cat"], key="choice")
         submit = st.form_submit_button(label="Generate Fun Fact")
 
+    placeholder = st.empty()
+    
     if submit:
-        col1, col2 = st.columns(2, gap="medium")
-        col1.image(f"images/{choice}.jpg", use_column_width=True)
-        animal_to_display = get_data(session, choice)
+        with placeholder.container():
+            col1, col2 = st.columns(2, gap="medium")
+            col1.image(f"images/{choice}.jpg", use_column_width=True)
+            animal_to_display = get_data(session, choice)
         if animal_to_display:
             col2.write(animal_to_display)
         else:
