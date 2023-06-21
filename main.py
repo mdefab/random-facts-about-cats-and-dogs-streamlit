@@ -10,7 +10,7 @@ def get_data(session, animal):
             # url_request = f"https://meowfacts.herokuapp.com/?id={random_id}"
             # result = session.get(url_request).json()
             # output = result['data'][0] #api object has only one key (data) that has a list as a value containing a single string
-            return "cat api no longer available"
+            return "free public cat api no longer available ;("
         if animal == "dog":
             url_request = "https://dogapi.dog/api/v2/facts"
             result = session.get(url_request).json()
