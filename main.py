@@ -6,11 +6,11 @@ import requests
 def get_data(session, animal):
     try:
         if animal == "cat":
-            random_id = random.randint(0, 90) #api has 91 random facts from id 0-90
-            url_request = f"https://meowfacts.herokuapp.com/?id={random_id}"
-            result = session.get(url_request).json()
-            output = result['data'][0] #api object has only one key (data) that has a list as a value containing a single string
-            return output
+            # random_id = random.randint(0, 90) #api has 91 random facts from id 0-90
+            # url_request = f"https://meowfacts.herokuapp.com/?id={random_id}"
+            # result = session.get(url_request).json()
+            # output = result['data'][0] #api object has only one key (data) that has a list as a value containing a single string
+            return "cat api no longer available"
         if animal == "dog":
             url_request = "https://dogapi.dog/api/v2/facts"
             result = session.get(url_request).json()
